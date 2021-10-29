@@ -18,10 +18,33 @@
     color: var(--textColor);
     margin-left: 3vw;
 }
+
 .splashscreen #right{
     font-family: 'Roboto', sans-serif;
-    font-size: var(--h1Size);
+    font-size: var(--h2Size);
     font-weight: 100;
     color: var(--textColor);
-    margin-left: 5vw;
+    margin-left: 6vw;
+}
+
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 50px;
+}
+
+.contact-icon{
+    width: clamp(50px,10vw,100px);
+    height: clamp(50px,10vw,100px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contact-icon:active{
+    transform: scale(0.8);
 }
