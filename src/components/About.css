@@ -69,13 +69,13 @@
     position: absolute;
     transform: translateX(-50%);
     left: 0px;
-    height: 300px;
-    z-index: 10;
+    height: clamp(100px,10vw,2500px);
+    z-index: 5;
 }
 .dog-pic{
     position: absolute;
     right: 0px;
     transform: translateX(50%);
-    height: 300px;
-    z-index: 10;
+    height: clamp(100px,10vw,250px);
+    z-index: 5;
 }
