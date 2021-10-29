@@ -12,7 +12,7 @@ function Contact(){
             <div className='contact-container'>
                 <a href='https://github.com/WilliamAlb' target='_blank' rel='noreferrer'>{icons.githubContact}</a>
                 <a href='https://www.linkedin.com/in/william-allaberdyev-12590b211/' target='_blank' rel='noreferrer'>{icons.linkedinContact}</a>
-                <a href='eridianwiliam@yahoo.com' target='_blank' rel='noreferrer'>{icons.mailContact}</a>
+                <a href='mailto:eridianwiliam@yahoo.com' target='_blank' rel='noreferrer'>{icons.mailContact}</a>
                 <a href='https://www.codecademy.com/profiles/EridWill' target='_blank' rel='noreferrer'>{icons.codeacademyContact}</a>
             </div>
         </div>
