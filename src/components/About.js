@@ -2,7 +2,11 @@ import React from "react";
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
+
 import { icons } from "./utils/icons";
+import eva from '../images/eva.png';
+import jerry from '../images/jerry.png';
 
 const responsive = {
     desktop: {
@@ -31,6 +35,7 @@ function About(){
             <p>Here's my Stack:</p>
             
             <div id='carousel-container'>
+                <img className='cat-pic' src={eva} alt='my cat eva'></img>
                 <Carousel 
                     responsive={responsive} 
                     infinite={true} 
@@ -45,6 +50,7 @@ function About(){
                         <div className='stack-icon-container'>{icons.css}<p>CSS</p></div>
                         <div className='stack-icon-container'>{icons.github}<p>Github</p></div>
                 </Carousel>
+                <img className='dog-pic' src={jerry} alt='my dog jerry'></img>
             </div>
         </section>
     );

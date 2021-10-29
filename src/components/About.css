@@ -57,10 +57,25 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    position: relative;
 
 }
 
 .react-multi-carousel-item{
     display: flex;
     justify-content: center;
+}
+.cat-pic{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 0px;
+    height: 300px;
+    z-index: 10;
+}
+.dog-pic{
+    position: absolute;
+    right: 0px;
+    transform: translateX(50%);
+    height: 300px;
+    z-index: 10;
 }
