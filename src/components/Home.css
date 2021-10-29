@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+.splashscreen{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/Banner-optimized.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.splashscreen #left{
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--h1Size);
+    font-weight: 100;
+    color: var(--textColor);
+    margin-left: 3vw;
+}
+.splashscreen #right{
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--h1Size);
+    font-weight: 100;
+    color: var(--textColor);
+    margin-left: 5vw;
+}

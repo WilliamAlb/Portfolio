@@ -1,0 +1,30 @@
+:root{
+    --bgColor:#E5E5E5;
+    --textColor:#565656;
+    --h1Size: clamp(3rem,10vw,10rem);
+    --h2Size: clamp(2rem,4vw,8rem);
+}
+
+html{
+    background-color: var(--bgColor);
+    font-size: 16px;
+}
+
+.page{
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+}
+@media only screen and (max-width:800px) {
+    .page{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: calc(100vh - 100px)
+    }
+}
+@media only screen and (max-width:400px) {
+    .page{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: calc(100vh - 100px)
+    }
+}
