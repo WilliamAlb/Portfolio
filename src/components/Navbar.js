@@ -12,9 +12,9 @@ function Navbar(){
     return (
         <nav>
             <ul className='nav-list'>
-                <Link to='/About'><li className='nav-item'>{icons.about}<p>About</p></li></Link>
-                <Link to='/Work'><li className='nav-item'>{icons.work}<p>Work</p></li></Link>
-                <Link to='/Contact'><li className='nav-item'>{icons.contact}<p>Contact</p></li></Link>
+                <Link to='/about'><li className='nav-item'>{icons.about}<p>About</p></li></Link>
+                <Link to='/work'><li className='nav-item'>{icons.work}<p>Work</p></li></Link>
+                <Link to='/contact'><li className='nav-item'>{icons.contact}<p>Contact</p></li></Link>
             </ul>
         </nav>
     );

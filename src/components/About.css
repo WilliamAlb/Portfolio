@@ -5,17 +5,17 @@
     color: var(--textColor);
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 .profile-pic{
     background-image: url('../images/profile-pic-alt.jpg');
     background-size: cover;
     background-position: center;
-    background-position-y: top;
+    background-position-y: 80%;
     border-radius: 50%;
-    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.25);
     width: clamp(200px,20vw,500px);
     height: clamp(200px,20vw,500px);
-    
 }
 
 @media only screen and (max-height:600px) {
@@ -25,10 +25,11 @@
     }
 }
 
-#About p{
-    font-size: clamp(0.9rem,1vw,8rem);
+#About p {
+    font-size: var(--h4Size);
     margin: 0px 15vw;
     text-align: center;
+    font-weight: 100;
 }
 
 #About h2{
@@ -65,17 +66,21 @@
     display: flex;
     justify-content: center;
 }
-.cat-pic{
+.pet-container{
+    width: 115%;
     position: absolute;
-    transform: translateX(-50%);
-    left: 0px;
-    height: clamp(100px,10vw,2500px);
+    bottom: -5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: -1;
+
+}
+.cat-pic{
+    height: clamp(150px,20vw,600px);
     z-index: 5;
 }
 .dog-pic{
-    position: absolute;
-    right: 0px;
-    transform: translateX(50%);
-    height: clamp(100px,10vw,250px);
+    height: clamp(150px,20vw,600px);
     z-index: 5;
 }

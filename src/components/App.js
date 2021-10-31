@@ -22,9 +22,9 @@ function App() {
         <main>
           <Switch>
             <Route path="/" exact={true} component={About}/>
-            <Route path="/About" exact={true} component={About}/>
-            <Route path="/Work" exact={true} component={Work}/>
-            <Route path="/Contact" exact={true} component={Contact}/>
+            <Route path="/about" exact={true} component={About}/>
+            <Route path="/work" exact={true} component={Work}/>
+            <Route path="/contact" exact={true} component={Contact}/>
           </Switch>
         </main>
       </div>
