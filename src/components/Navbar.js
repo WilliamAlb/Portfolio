@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { routes } from "./utils/routes";
 
 const icons = {
     about:      <svg xmlns="http://www.w3.org/2000/svg" className="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
@@ -12,9 +13,9 @@ function Navbar(){
     return (
         <nav>
             <ul className='nav-list'>
-                <Link to='/about'><li className='nav-item'>{icons.about}<p>About</p></li></Link>
-                <Link to='/work'><li className='nav-item'>{icons.work}<p>Work</p></li></Link>
-                <Link to='/contact'><li className='nav-item'>{icons.contact}<p>Contact</p></li></Link>
+                <Link to={routes.about}><li className='nav-item'>{icons.about}<p>About</p></li></Link>
+                <Link to={routes.work}><li className='nav-item'>{icons.work}<p>Work</p></li></Link>
+                <Link to={routes.contact}><li className='nav-item'>{icons.contact}<p>Contact</p></li></Link>
             </ul>
         </nav>
     );
