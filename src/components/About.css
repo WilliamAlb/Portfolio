@@ -15,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 3% 0px;
 }
 .profile-pic{
     background-image: url('../images/profile-pic-alt.jpg');
