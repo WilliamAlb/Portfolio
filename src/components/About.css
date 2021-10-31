@@ -1,11 +1,20 @@
 #About{
-    grid-template: repeat(10,1fr) / repeat(10, 1fr);
-    grid-gap: 10px;
     display: flex;
     color: var(--textColor);
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+}
+.about-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .profile-pic{
     background-image: url('../images/profile-pic-alt.jpg');
@@ -21,17 +30,40 @@
 @media only screen and (max-height:600px) {
     .profile-pic{
         width: clamp(150px,20vw,500px);
-        height: clamp(200px,20vw,500px);
+        height: clamp(150px,20vw,500px);
+    }
+}
+@media only screen and (max-height:400px) {
+    .about-content-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-text-container{
+        width: 60%;
+    }
+    #About p {
+        margin: 0px;
+    }
+    .profile-pic{
+        width: 120px;
+        height: 120px;
     }
 }
 
 #About p {
-    font-size: var(--h4Size);
+    font-size: var(--h5Size);
     margin: 0px 15vw;
     text-align: center;
     font-weight: 100;
 }
-
+@media only screen and (max-height:400px) {
+    #About p {
+        font-size:12px;
+        margin: 0px 10px;
+    }
+}
 #About h2{
     display: flex;
     justify-content: left;

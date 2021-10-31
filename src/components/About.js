@@ -30,10 +30,14 @@ const responsive = {
 function About(){
     return(
         <section id='About' className='page'>
-            <div className='profile-pic'></div>
-            <h2>William Allaberdyev</h2>
-            <p>Hi! My name's William, I'm a passionate 25 years old fullstack developer living in Haifa with my girlfriend, my dog and my cat.</p>
-            <p>Here's my Stack:</p>
+             <div className='about-content-container'>
+                <div className='profile-pic'></div>
+                <div className='about-text-container'>
+                    <h2>William Allaberdyev</h2>
+                    <p>Hi! My name's William, I'm a passionate 25 years old fullstack developer living in Haifa with my girlfriend, my dog and my cat.</p>
+                    <p>Here's my Stack:</p>
+                </div>
+            </div>
             
             <div id='carousel-container'>
                 
