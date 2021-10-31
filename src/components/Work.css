@@ -19,6 +19,7 @@
     margin: 3% auto;
     position: relative;
     font-family: 'Roboto', sans-serif;
+    
 }
 @media only screen and (max-width:800px) {
     .work-item-right{
@@ -28,7 +29,8 @@
 .work-item-right img {
     width: 100%;
     height: auto;
-    box-shadow:  2px 4px 4px rgba(0, 0, 0, 0.5)
+    box-shadow:  2px 4px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeGrow 1s ease forwards;
 }
 .work-stack{
     height:20px;
@@ -45,6 +47,7 @@
 .content-div-right{
     width: 100%;
     margin: 0px 3%;
+    animation: fadeInRight 2s ease forwards;
 }
 @media only screen and (max-width:800px) {
     .content-div-right{
@@ -79,7 +82,8 @@
 .work-item-left img {
     width: 100%;
     height: auto;
-    box-shadow:  2px 4px 4px rgba(0, 0, 0, 0.0.5)
+    box-shadow:  2px 4px 4px rgba(0, 0, 0, 0.0.5);
+    animation: fadeGrow 1s ease forwards;
 }
 
 .header-div-left{
@@ -96,6 +100,7 @@
 .content-div-left{
     width: 100%;
     margin: 0px 3%;
+    animation: fadeInLeft 2s ease forwards;
 }
 @media only screen and (max-width:800px) {
     .content-div-left{

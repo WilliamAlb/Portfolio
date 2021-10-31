@@ -35,7 +35,7 @@ function About(){
                 <div className='about-text-container'>
                     <h2>William Allaberdyev</h2>
                     <p>Hi! My name's William, I'm a passionate 25 years old fullstack developer living in Haifa with my girlfriend, my dog and my cat.</p>
-                    <p>Here's my Stack:</p>
+                    <h3>Here's my Stack:</h3>
                 </div>
             </div>
             

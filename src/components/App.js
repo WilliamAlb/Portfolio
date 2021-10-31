@@ -11,6 +11,7 @@ import './App.css';
 import './Navbar.css';
 import './Contact.css';
 import './About.css'
+import './animations.css';
 
 function App() {
   return (

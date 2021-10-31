@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;400&display=swap');
+
 :root{
     --bgColor:#E5E5E5;
     --textColor:#565656;
@@ -7,6 +10,10 @@
     --h4Size: clamp(2rem,4vw,5rem);
     --h5Size: clamp(1.6rem,1vw,4rem);
     --psize: clamp(1rem,1vw,4rem);
+
+    --animation-first:1;
+    --animation-second:2;
+    --animation-third:3;
 }
 
 html{
@@ -30,6 +37,10 @@ html{
         margin-bottom: 50px;
         height: calc(100vh - 80px)
     }
+    .page-work{
+        margin-bottom: 50px;
+
+    }
 }
 @media only screen and (max-width:400px) {
     .page{
@@ -37,13 +48,9 @@ html{
         margin-bottom: 10px;
         height: calc(100vh - 20px)
     }
-    .page-work{
-        margin-top: 50px;
-        margin-bottom: 50px;
 
-    }
 }
-@media only screen and (max-height:300px) {
+@media only screen and (max-height:500px) {
     .page{
         margin-top: 5px;
         margin-bottom: 50px;
