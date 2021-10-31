@@ -1,6 +1,7 @@
 import React from "react";
 import {WorkItem} from './WorkItem';
 import { images } from "./utils/images";
+import './Work.css'
 
 const testitem=[
     {
@@ -25,6 +26,7 @@ const testitem=[
 function Work(){
     return(
         <section className='page-work'>
+            <h1 className='title'>My Work</h1>
             {
                 testitem.map((item,index) =>{
                     return index%2!==0?<WorkItem right={false} workItem={item}/>:<WorkItem right={true} workItem={item}/>

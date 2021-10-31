@@ -1,6 +1,5 @@
 import React from "react";
 import { icons } from "./utils/icons";
-import './WorkItem.css'
 
 export function WorkItem(props){
     return(

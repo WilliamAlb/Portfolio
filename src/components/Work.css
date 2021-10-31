@@ -1,11 +1,29 @@
+.title{
+    font-size:  var(--h2Size);
+    font-weight: 100;
+    border-bottom: 2px solid var(--textColor);
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: none;
+}
+@media only screen and (max-width:800px) {
+    .title{
+        display: block;
+    }
+}
 /* =================================================================right item============================================== */
 .work-item-right{
     display: flex;
     width: 90%;
     height: 50%;
-    margin: 50px auto;
+    margin: 3% auto;
     position: relative;
     font-family: 'Roboto', sans-serif;
+}
+@media only screen and (max-width:800px) {
+    .work-item-right{
+        flex-direction: column;
+    }
 }
 .work-item-right img {
     width: 100%;
@@ -28,6 +46,11 @@
     width: 100%;
     margin: 0px 3%;
 }
+@media only screen and (max-width:800px) {
+    .content-div-right{
+        margin: 0px;
+    }
+}
 .header-div-right h4 {
     font-size: var(--h4Size);
     font-weight: 100;
@@ -35,17 +58,23 @@
 }
 .content-div-right p{
     font-size: var(--psize);
+    font-weight: 100;
 }
 /* =================================================================left item============================================== */
 .work-item-left{
     display: flex;
     width: 90%;
     height: 50%;
-    margin: 50px auto;
+    margin: 3% auto;
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     flex-direction: row-reverse;
     position: relative;
+}
+@media only screen and (max-width:800px) {
+    .work-item-left{
+        flex-direction: column;
+    }
 }
 .work-item-left img {
     width: 100%;
@@ -61,9 +90,17 @@
     border-bottom: 2px solid var(--textColor);
     margin-bottom: 5px;
 }
+.header-stack-div{
+    display: flex;
+}
 .content-div-left{
     width: 100%;
     margin: 0px 3%;
+}
+@media only screen and (max-width:800px) {
+    .content-div-left{
+        margin: 0px;
+    }
 }
 .header-div-left h4 {
     font-size: var(--h4Size);
@@ -72,4 +109,5 @@
 }
 .content-div-left p{
     font-size: var(--psize);
+    font-weight: 100;
 }
