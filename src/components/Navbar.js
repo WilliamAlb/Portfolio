@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import {NavLink } from "react-router-dom";
 import { routes } from "./utils/routes";
 
@@ -10,7 +10,6 @@ const icons = {
 }
 
 function Navbar(){
-    const [icon,setIcon] = useState('')
     return (
         <nav>
             <ul className='nav-list'>
