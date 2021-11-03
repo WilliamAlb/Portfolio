@@ -27,6 +27,7 @@
     }
 }
 .work-item-right img {
+    border: 3px solid rgb(255 121 0);
     width: 100%;
     height: auto;
     box-shadow:  2px 4px 4px rgba(0, 0, 0, 0.5);
@@ -80,9 +81,10 @@
     }
 }
 .work-item-left img {
+    border: 3px solid rgb(255 121 0);
     width: 100%;
     height: auto;
-    box-shadow:  2px 4px 4px rgba(0, 0, 0, 0.0.5);
+    box-shadow:  2px 4px 4px rgba(0, 0, 0, 0.5);
     animation: fadeGrow 1s ease forwards;
 }
 

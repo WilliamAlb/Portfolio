@@ -42,7 +42,9 @@ nav {
 .nav-item:active{
     transform: translateY(3px);
 }
-
+.selected li{
+    color: rgb(255 121 0);
+}
 @media only screen and (max-width:800px) {
     .nav-item p{
         display: none;

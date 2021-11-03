@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3% 0px;
+    margin: 10px 0px;
     
 }
 .profile-pic{
@@ -86,8 +86,8 @@
     font-size:  var(--h3Size);
 }
 .stack-icon{
-    width: clamp(80px,10vw,200px);
-    height: clamp(80px,10vw,200px);
+    width: clamp(80px,9vw,200px);
+    height: clamp(80px,9vw,200px);
 }
 .stack-icon-container{
     margin: 0px;

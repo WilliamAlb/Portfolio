@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React,{useState} from "react";
+import {NavLink } from "react-router-dom";
 import { routes } from "./utils/routes";
 
 const icons = {
@@ -10,12 +10,13 @@ const icons = {
 }
 
 function Navbar(){
+    const [icon,setIcon] = useState('')
     return (
         <nav>
             <ul className='nav-list'>
-                <Link to={routes.about}><li className='nav-item'>{icons.about}<p>About</p></li></Link>
-                <Link to={routes.work}><li className='nav-item'>{icons.work}<p>Work</p></li></Link>
-                <Link to={routes.contact}><li className='nav-item'>{icons.contact}<p>Contact</p></li></Link>
+                <NavLink activeClassName="selected" to={routes.about}><li className='nav-item'>{icons.about}<p>About</p></li></NavLink>
+                <NavLink activeClassName="selected" to={routes.work}><li className='nav-item'>{icons.work}<p>Work</p></li></NavLink>
+                <NavLink activeClassName="selected" to={routes.contact}><li className='nav-item'>{icons.contact}<p>Contact</p></li></NavLink>
             </ul>
         </nav>
     );
