@@ -23,7 +23,6 @@ function App() {
         <main>
           <Switch>
             <Route path="/" exact={true} component={About}/>
-            <Route path="/about" exact={true} component={About}/>
             <Route path="/work" exact={true} component={Work}/>
             <Route path="/contact" exact={true} component={Contact}/>
           </Switch>

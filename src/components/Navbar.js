@@ -13,7 +13,7 @@ function Navbar(){
     return (
         <nav>
             <ul className='nav-list'>
-                <NavLink activeClassName="selected" to={routes.about}><li className='nav-item'>{icons.about}<p>About</p></li></NavLink>
+                <NavLink activeClassName="selected" to={routes.about} exact><li className='nav-item'>{icons.about}<p>About</p></li></NavLink>
                 <NavLink activeClassName="selected" to={routes.work}><li className='nav-item'>{icons.work}<p>Work</p></li></NavLink>
                 <NavLink activeClassName="selected" to={routes.contact}><li className='nav-item'>{icons.contact}<p>Contact</p></li></NavLink>
             </ul>

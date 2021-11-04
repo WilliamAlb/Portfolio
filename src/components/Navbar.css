@@ -43,7 +43,7 @@ nav {
     transform: translateY(3px);
 }
 .selected li{
-    color: rgb(255 121 0);
+    color: rgb(43, 164, 219);
 }
 @media only screen and (max-width:800px) {
     .nav-item p{
