@@ -39,6 +39,7 @@ html{
     }
     .page-work{
         margin-bottom: 50px;
+        margin-top: 20px;
 
     }
 }
@@ -52,8 +53,8 @@ html{
 }
 @media only screen and (max-height:500px) {
     .page{
-        margin-top: 5px;
+        margin-top: 25px;
         margin-bottom: 50px;
-        height: calc(100vh - 55px)
+        height: calc(100vh - 75px)
     }
 }

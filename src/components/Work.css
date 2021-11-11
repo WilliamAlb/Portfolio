@@ -52,7 +52,7 @@
 }
 @media only screen and (max-width:800px) {
     .content-div-right{
-        margin: 0px;
+        margin: 20px 0px 0px 0px;
     }
 }
 .header-div-right h4 {
@@ -63,6 +63,12 @@
 .content-div-right p{
     font-size: var(--psize);
     font-weight: 100;
+}
+@media only screen and (max-width:800px) {
+    .content-div-right p{
+        font-size: var(--h3Size);
+        font-weight: 100;
+    }
 }
 /* =================================================================left item============================================== */
 .work-item-left{
@@ -106,7 +112,7 @@
 }
 @media only screen and (max-width:800px) {
     .content-div-left{
-        margin: 0px;
+        margin: 20px 0px 0px 0px;
     }
 }
 .header-div-left h4 {
@@ -117,4 +123,10 @@
 .content-div-left p{
     font-size: var(--psize);
     font-weight: 100;
+}
+@media only screen and (max-width:800px) {
+    .content-div-left p{
+        font-size: var(--h3Size);
+        font-weight: 100;
+    }
 }
