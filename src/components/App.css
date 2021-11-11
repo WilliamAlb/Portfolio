@@ -7,7 +7,7 @@
     --h1Size: clamp(3.2rem,10vw,10rem);
     --h2Size: clamp(2.8rem,4vw,8rem);
     --h3Size: clamp(2.4rem,4vw,6rem);
-    --h4Size: clamp(2rem,4vw,5rem);
+    --h4Size: clamp(2rem,4vw,4.2rem);
     --h5Size: clamp(1.6rem,1vw,4rem);
     --psize: clamp(1rem,1vw,4rem);
 

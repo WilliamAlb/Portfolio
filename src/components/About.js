@@ -57,7 +57,7 @@ function About(){
                         <div className='stack-icon-container'>{icons.css}<p>CSS</p></div>
                         <div className='stack-icon-container'>{icons.github}<p>Github</p></div>
                         <div className='stack-icon-container'>{icons.figma}<p>Figma</p></div>
-                        <div className='stack-icon-container'>{icons.redux}<p>redux</p></div>
+                        <div className='stack-icon-container'>{icons.redux}<p>Redux</p></div>
                 </Carousel>
                 
             </div>
