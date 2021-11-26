@@ -12,6 +12,14 @@ const testitem=[
         link:"https://github.com/WilliamAlb/themer"
     },
     {
+        name:'Reddit Mini',
+        description:'An educational project made with React Redux and the Reddit API, a content scroller with a search bar, the project was assigned to me by Codeacademy as one of the free-form projects, the project once more allowed me to hone my skills with redux, react and my problem solving abilities due to the scarcity of the available documentation on the Reddit JSON API.',
+        stack:['react','redux','js','css','html'],
+        picture:images.redditproject,
+        link:"https://github.com/WilliamAlb/redditmini"
+    }
+    ,
+    {
         name:'Rythmic Gymnastics',
         description:"A website developed for my mother's rhythmic gymnastics business in Karmi'el, implementing a minimalistic style and a modern feeling all the while attempting to maintain the integrity and personality of both the business itself and the owner, the development process taught me to better implement flex and grid type layouts as well as solidify my knowledge in JavaScript and styling prowess with CSS, all the while utilizing Photoshop and Figma as aids in the construction process, due to this being my first project a substantial amount of independent problem solving was used alongside teaching myself how to design and build a project from the ground up.",
         stack:['css','html','js'],
