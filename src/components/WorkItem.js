@@ -4,7 +4,7 @@ import { icons } from "./utils/icons";
 export function WorkItem(props){
     return(
         <div className={props.right?'work-item-right':'work-item-left'}>
-            <div><a href={props.workItem.link} target="_blank" rel="noreferrer"><img src={props.workItem.picture} alt='work example'></img></a></div>
+            <div className="work-img-div"><a href={props.workItem.link} target="_blank" rel="noreferrer"><img src={props.workItem.picture} alt='work example'></img></a></div>
             <div className={props.right?'content-div-right':'content-div-left'}>
                 <div className={props.right?'header-div-right':'header-div-left'}>
                     <h4>{props.workItem.name}</h4>

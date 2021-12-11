@@ -21,6 +21,9 @@
     font-family: 'Roboto', sans-serif;
     
 }
+.work-img-div{
+    flex: 2 1;
+}
 @media only screen and (max-width:800px) {
     .work-item-right{
         flex-direction: column;
@@ -49,6 +52,7 @@
     width: 100%;
     margin: 0px 3%;
     animation: fadeInRight 2s ease forwards;
+    flex: 1 1;
 }
 @media only screen and (max-width:800px) {
     .content-div-right{
@@ -109,6 +113,7 @@
     width: 100%;
     margin: 0px 3%;
     animation: fadeInLeft 2s ease forwards;
+    flex: 1 1;
 }
 @media only screen and (max-width:800px) {
     .content-div-left{
