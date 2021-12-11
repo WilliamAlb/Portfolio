@@ -20,11 +20,11 @@ const testitem=[
     }
     ,
     {
-        name:'Rythmic Gymnastics',
+        name:'Hesegi Sport Karmiel',
         description:"A website developed for my mother's rhythmic gymnastics business in Karmi'el, implementing a minimalistic style and a modern feeling all the while attempting to maintain the integrity and personality of both the business itself and the owner, the development process taught me to better implement flex and grid type layouts as well as solidify my knowledge in JavaScript and styling prowess with CSS, all the while utilizing Photoshop and Figma as aids in the construction process, due to this being my first project a substantial amount of independent problem solving was used alongside teaching myself how to design and build a project from the ground up.",
         stack:['css','html','js'],
         picture:images.rythmicproject,
-        link:"https://github.com/WilliamAlb/marias-rhythmic-gym/tree/main"
+        link:"https://github.com/WilliamAlb/hesegi-sport-karmiel"
     },
     {
         name:'Find your hat',
