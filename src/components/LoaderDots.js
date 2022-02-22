@@ -1,7 +1,7 @@
 import './LoaderDots.css'
-function LoaderDots() {
+function LoaderDots({idName}) {
   return (
-    <div id="loader">
+    <div id={idName}>
       <div className='loader-dot' id="loader-s1"></div>
       <div className='loader-dot' id="loader-s2"></div>
       <div className='loader-dot' id="loader-s3"></div>

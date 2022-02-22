@@ -6,12 +6,11 @@ function WorkImage({ src, alt }) {
   const picture = new Image();
   picture.src = src;
   picture.alt = alt;
-  console.log(picture);
   useEffect(() => {
     picture.onload = () => setLoading(false);
   });
   return loading ? (
-    <LoaderDots />
+    <LoaderDots idName={"loader"}/>
   ) : (
     <img src={src} alt={alt} loading="lazy"></img>
   );

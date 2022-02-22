@@ -1,43 +1,51 @@
-#loader{
-    border: 3px solid rgb(43, 164, 219);
-    width: auto;
-    height: auto;
-    min-height: 300px;
-    box-shadow: 2px 4px 4px rgb(0 0 0 / 50%);
-    max-width: 100%;
-    background-color: rgb(43, 164, 219);
-    aspect-ratio: 16 / 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+#loader {
+  border: 3px solid rgb(43, 164, 219);
+  width: auto;
+  height: auto;
+  min-height: 300px;
+  box-shadow: 2px 4px 4px rgb(0 0 0 / 50%);
+  max-width: 100%;
+  background-color: rgb(43, 164, 219);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+#loader-splash {
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.loader-dot{
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    margin: 10px;
-    background-color: white;
+.loader-dot {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+  border: 3px solid rgb(43, 164, 219);
 }
-#loader-s1{
-    animation: load 1s infinite ease-in-out;
+#loader-s1 {
+  animation: load 1s infinite ease-in-out;
 }
-#loader-s2{
-    animation: load 1s 0.33s infinite ease-in-out;
+#loader-s2 {
+  animation: load 1s 0.33s infinite ease-in-out;
 }
-#loader-s3{
-    animation: load 1s 0.66s infinite ease-in-out;
+#loader-s3 {
+  animation: load 1s 0.66s infinite ease-in-out;
 }
 
-@keyframes load{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(0.3);
-    }
-    100%{
-        transform: scale(1);
-    }
+@keyframes load {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
