@@ -5,38 +5,38 @@ import { animated } from "@react-spring/web";
 export default function SplashText() {
   const fadeIn = useSpring({
     to: async (next) => {
-      await next({ opacity: 1, top:0 });
+      await next({ opacity: 1, top: 0 });
     },
     from: {
       opacity: 0,
-      top:-50,
+      top: -50,
     },
-    delay:3000,
-    config:config.slow,
+    delay: 3000,
+    config: config.slow,
   });
   const fadeInSecond = useSpring({
     to: async (next) => {
-      await next({ opacity: 1, top:0 });
+      await next({ opacity: 1, top: 0 });
     },
 
     from: {
       opacity: 0,
-      top:-100,
+      top: -100,
     },
-    delay:4000,
-    config:config.slow,
+    delay: 4000,
+    config: config.slow,
   });
   const fadeInThird = useSpring({
     to: async (next) => {
-      await next({ opacity: 1, top:0 });
+      await next({ opacity: 1, top: 0 });
     },
 
     from: {
       opacity: 0,
-      top:-100,
+      top: -100,
     },
-    delay:5500,
-    config:config.slow,
+    delay: 5500,
+    config: config.slow,
   });
   return (
     <Html position={[2, 1.5, 0]}>
