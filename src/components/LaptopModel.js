@@ -15,29 +15,29 @@ export default function LaptopModel({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF("models/laptop/scene.gltf");
   const openScreen = useSpring({
-    to: async (next)=>{
-      await next ({rotation:[-2, 0, Math.PI]})
+    to: async (next) => {
+      await next({ rotation: [-2, 0, Math.PI] });
     },
-    delay:500,
-    from:{
-      rotation:[0, 0, Math.PI]
+    delay: 500,
+    from: {
+      rotation: [0, 0, Math.PI],
     },
-    config:config.slow
+    config: config.slow,
   });
   const rotateIn = useSpring({
     to: async (next) => {
+      await next({ rotation: [0, 2 * Math.PI, 0], position: [1.5, 0, 0] })
       await next({ rotation: [0, 2 * Math.PI, 0], position: [0, 0, 0] });
     },
     from: {
       rotation: [0, Math.PI, 0],
-      position:[0,0,-10]
+      position: [0, 0, -10],
     },
     config: {
       tension: 60,
-      
     },
   });
-  
+
   return (
     <a.group
       ref={group}
@@ -46,6 +46,8 @@ export default function LaptopModel({ ...props }) {
       rotation={rotateIn.rotation}
       position={rotateIn.position}
       onClick={() => setOpen(!open)}
+      castShadow
+      receiveShadow
     >
       <group
         rotation={[-Math.PI / 2 + 0.3, 0.1, 0.5]}
@@ -55,12 +57,16 @@ export default function LaptopModel({ ...props }) {
         <a.mesh
           geometry={nodes.Frame_ComputerFrame_0.geometry}
           material={materials.ComputerFrame}
+          castShadow
+          receiveShadow
         />
         <a.mesh
           geometry={nodes.Screen_ComputerScreen_0.geometry}
           material={materials.ComputerScreen}
           rotation={openScreen.rotation}
           position={[0, 0.1, 0]}
+          castShadow
+          receiveShadow
         />
       </group>
     </a.group>

@@ -140,6 +140,9 @@
     font-weight: 100;
 }
 
+.ThreeCanvas{
+    z-index: -2;
+}
 @media only screen and (max-width:800px) {
     .content-div-left p{
         font-size: var(--h3Size);

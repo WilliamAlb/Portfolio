@@ -1,14 +1,11 @@
-import React, { Suspense } from "react";
+import React from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ThreeCanvas from "./ThreeCanvas";
 
 import { icons } from "./utils/icons";
 import { images } from "./utils/images";
-
-import { Canvas } from "@react-three/fiber";
-import LaptopModel from "./LaptopModel";
-import IphoneModel from "./IphoneModel";
 
 const responsive = {
   desktop: {
@@ -39,15 +36,7 @@ function About() {
                     <h3>Here's my Stack:</h3>
                 </div>
             </div> */}
-      <Canvas camera={{fov:60}}>
-        <Suspense fallback={null}>
-          <ambientLight intensity={0.1} />
-          <directionalLight color="white" position={[5, 5, 5]} />
-          <LaptopModel></LaptopModel>
-          <IphoneModel></IphoneModel>
-          {/* <TestShape></TestShape> */}
-        </Suspense>
-      </Canvas>
+      <ThreeCanvas />
       <div id="carousel-container">
         <Carousel
           responsive={responsive}

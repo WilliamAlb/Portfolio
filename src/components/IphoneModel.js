@@ -17,6 +17,7 @@ export default function IphoneModel({ ...props }) {
 
   const rotateIn = useSpring({
     to: async (next) => {
+      await next({ rotation: [Math.PI / 2, 0, -0.5], position: [1.5, 0, 0.5] });
       await next({ rotation: [Math.PI / 2, 0, -0.5], position: [0, 0, 0.5] });
     },
     from: {
@@ -59,6 +60,8 @@ export default function IphoneModel({ ...props }) {
               <mesh
                 geometry={nodes.object001_alu_0.geometry}
                 material={materials.material_1}
+                castShadow
+                receiveShadow
               />
             </group>
             <group
