@@ -14,7 +14,6 @@ import { useSpring, a } from "@react-spring/three";
 export default function IphoneModel({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/models/iphone/scene.gltf");
-
   const rotateIn = useSpring({
     to: async (next) => {
       await next({ rotation: [Math.PI / 2, 0, -0.5], position: [1.5, 0, 0.5] });

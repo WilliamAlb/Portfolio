@@ -8,7 +8,7 @@ import StageModel from "./StageModel";
 import SplashText from "./SplashText";
 import LoaderDots from "./LoaderDots";
 
-import './ThreeCanvas.css'
+import "./ThreeCanvas.css";
 export default function ThreeCanvas() {
   return (
     <Canvas
@@ -16,7 +16,13 @@ export default function ThreeCanvas() {
       camera={{ fov: 30, position: [0, 0, 10] }}
       shadows
     >
-      <Suspense fallback={<Html className="suspenderContainer"><LoaderDots idName={"loader-splash"} /></Html>}>
+      <Suspense
+        fallback={
+          <Html className="suspenderContainer">
+            <LoaderDots idName={"loader-splash"} />
+          </Html>
+        }
+      >
         <fog attach="fog" args={["#E5E5E5", 0, 50]} />
         <ambientLight intensity={1} color="white" />
         <directionalLight
@@ -27,9 +33,10 @@ export default function ThreeCanvas() {
           position={[0, 3, 2]}
         />
         <SplashText />
-        <LaptopModel></LaptopModel>
-        <IphoneModel></IphoneModel>
-        <StageModel></StageModel>
+
+          <LaptopModel></LaptopModel>
+          <IphoneModel></IphoneModel>
+          <StageModel></StageModel>
       </Suspense>
     </Canvas>
   );

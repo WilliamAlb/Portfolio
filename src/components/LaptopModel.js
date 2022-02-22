@@ -18,7 +18,7 @@ export default function LaptopModel({ ...props }) {
     to: async (next) => {
       await next({ rotation: [-2, 0, Math.PI] });
     },
-    delay: 500,
+    delay: 1000,
     from: {
       rotation: [0, 0, Math.PI],
     },
