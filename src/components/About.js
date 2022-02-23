@@ -5,7 +5,6 @@ import "react-multi-carousel/lib/styles.css";
 import ThreeCanvas from "./ThreeCanvas";
 
 import { icons } from "./utils/icons";
-import { images } from "./utils/images";
 
 const responsive = {
   desktop: {
