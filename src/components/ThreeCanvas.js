@@ -9,7 +9,10 @@ import SplashText from "./SplashText";
 import LoaderDots from "./LoaderDots";
 
 import "./ThreeCanvas.css";
+
 export default function ThreeCanvas() {
+
+  
   return (
     <Canvas
       className="ThreeCanvas"

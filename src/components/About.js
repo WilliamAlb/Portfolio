@@ -78,10 +78,6 @@ function About() {
           </div>
         </Carousel>
       </div>
-      <div className="pet-container">
-        <img className="cat-pic" src={images.eva} alt="my cat eva"></img>
-        <img className="dog-pic" src={images.jerry} alt="my dog jerry"></img>
-      </div>
     </section>
   );
 }

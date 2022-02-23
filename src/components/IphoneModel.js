@@ -10,14 +10,18 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 import { useSpring, a } from "@react-spring/three";
+import { useThree } from "@react-three/fiber";
 
 export default function IphoneModel({ ...props }) {
-  const group = useRef();
+  const aspectRatio = useThree((state) => state.viewport.aspect);
   const { nodes, materials } = useGLTF("/models/iphone/scene.gltf");
+  const group = useRef();
+  console.log(aspectRatio)
   const rotateIn = useSpring({
+    
     to: async (next) => {
-      await next({ rotation: [Math.PI / 2, 0, -0.5], position: [1.5, 0, 0.5] });
-      await next({ rotation: [Math.PI / 2, 0, -0.5], position: [0, 0, 0.5] });
+      await next({ rotation: [Math.PI / 2, 0, -0.5], position: [aspectRatio<1.2?aspectRatio:1.5, 0, 0.5] });
+      await next({ rotation: [Math.PI / 2, 0, -0.5], position: [aspectRatio<1.2?-aspectRatio:0, 0, 0.5] });
     },
     from: {
       rotation: [Math.PI / 2, 0, 2],
@@ -34,164 +38,165 @@ export default function IphoneModel({ ...props }) {
       {...props}
       dispose={null}
       rotation={rotateIn.rotation}
-      scale={[0.02, 0.02, 0.02]}
       position={rotateIn.position}
       style={{ opacity: 0.1 }}
     >
-      <group rotation={[-Math.PI / 2, 0, 0]}>
+      <group scale={[0.02, 0.02, 0.02]}>
         <group rotation={[-Math.PI / 2, 0, 0]}>
-          <group rotation={[Math.PI / 2, 0, 0]}>
-            <group
-              position={[-0.04, 0.81, 0.05]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object_A_0.geometry}
-                material={materials.material}
-              />
-            </group>
-            <group
-              position={[-0.05, 0, 0.05]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object001_alu_0.geometry}
-                material={materials.material_1}
-                castShadow
-                receiveShadow
-              />
-            </group>
-            <group
-              position={[11.65, 69.22, -1.8]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object002_fash_0.geometry}
-                material={materials.fash}
-              />
-            </group>
-            <group
-              position={[4.22, 59.37, 0.51]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object003_gryl_0.geometry}
-                material={materials.gryl}
-              />
-            </group>
-            <group
-              position={[17.27, 61.04, 0.28]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object004_lense_0.geometry}
-                material={materials.lense}
-              />
-            </group>
-            <group
-              position={[18.84, 58.09, -3.35]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object005_dchr_0.geometry}
-                material={materials.dchr}
-              />
-            </group>
-            <group
-              position={[-0.05, 0, 3.49]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object006_bezel_0.geometry}
-                material={materials.bezel}
-              />
-            </group>
-            <group
-              position={[0, 36.09, 0.1]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object007_but_0.geometry}
-                material={materials.material_7}
-              />
-            </group>
-            <group
-              position={[-0.05, 0, 0.05]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object008_ant_0.geometry}
-                material={materials.material_8}
-              />
-            </group>
-            <group
-              position={[18.84, 58.08, -3.11]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object009_chr_0.geometry}
-                material={materials.material_9}
-              />
-            </group>
-            <group
-              position={[-0.05, 0, 3.86]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object010_scr_0.geometry}
-                material={materials.material_10}
-              />
-            </group>
-            <group
-              position={[18.84, 58.08, -3.65]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object011_glsl_0.geometry}
-                material={materials.glsl}
-              />
-            </group>
-            <group
-              position={[-0.05, 0, 0]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object012_glass_0.geometry}
-                material={materials.glass}
-              />
-            </group>
-            <group
-              position={[18.83, 59.04, 0.03]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object013_misc1_0.geometry}
-                material={materials.misc1}
-              />
-            </group>
-            <group
-              position={[0.5, 6.14, -3.08]}
-              rotation={[-Math.PI / 2, 0, 0]}
-              scale={[100, 100, 100]}
-            >
-              <mesh
-                geometry={nodes.object014_logo_0.geometry}
-                material={materials.logo}
-              />
+          <group rotation={[-Math.PI / 2, 0, 0]}>
+            <group rotation={[Math.PI / 2, 0, 0]}>
+              <group
+                position={[-0.04, 0.81, 0.05]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object_A_0.geometry}
+                  material={materials.material}
+                />
+              </group>
+              <group
+                position={[-0.05, 0, 0.05]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object001_alu_0.geometry}
+                  material={materials.material_1}
+                  castShadow
+                  receiveShadow
+                />
+              </group>
+              <group
+                position={[11.65, 69.22, -1.8]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object002_fash_0.geometry}
+                  material={materials.fash}
+                />
+              </group>
+              <group
+                position={[4.22, 59.37, 0.51]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object003_gryl_0.geometry}
+                  material={materials.gryl}
+                />
+              </group>
+              <group
+                position={[17.27, 61.04, 0.28]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object004_lense_0.geometry}
+                  material={materials.lense}
+                />
+              </group>
+              <group
+                position={[18.84, 58.09, -3.35]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object005_dchr_0.geometry}
+                  material={materials.dchr}
+                />
+              </group>
+              <group
+                position={[-0.05, 0, 3.49]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object006_bezel_0.geometry}
+                  material={materials.bezel}
+                />
+              </group>
+              <group
+                position={[0, 36.09, 0.1]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object007_but_0.geometry}
+                  material={materials.material_7}
+                />
+              </group>
+              <group
+                position={[-0.05, 0, 0.05]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object008_ant_0.geometry}
+                  material={materials.material_8}
+                />
+              </group>
+              <group
+                position={[18.84, 58.08, -3.11]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object009_chr_0.geometry}
+                  material={materials.material_9}
+                />
+              </group>
+              <group
+                position={[-0.05, 0, 3.86]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object010_scr_0.geometry}
+                  material={materials.material_10}
+                />
+              </group>
+              <group
+                position={[18.84, 58.08, -3.65]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object011_glsl_0.geometry}
+                  material={materials.glsl}
+                />
+              </group>
+              <group
+                position={[-0.05, 0, 0]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object012_glass_0.geometry}
+                  material={materials.glass}
+                />
+              </group>
+              <group
+                position={[18.83, 59.04, 0.03]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object013_misc1_0.geometry}
+                  material={materials.misc1}
+                />
+              </group>
+              <group
+                position={[0.5, 6.14, -3.08]}
+                rotation={[-Math.PI / 2, 0, 0]}
+                scale={[100, 100, 100]}
+              >
+                <mesh
+                  geometry={nodes.object014_logo_0.geometry}
+                  material={materials.logo}
+                />
+              </group>
             </group>
           </group>
         </group>

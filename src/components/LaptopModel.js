@@ -9,9 +9,12 @@ title: Laptop
 import React, { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useSpring, a, config } from "@react-spring/three";
+import { useThree } from "@react-three/fiber";
 
 export default function LaptopModel({ ...props }) {
   const [open, setOpen] = useState(false);
+  const aspectRatio = useThree((state) => state.viewport.aspect);
+
   const group = useRef();
   const { nodes, materials } = useGLTF("models/laptop/scene.gltf");
   const openScreen = useSpring({
@@ -26,8 +29,11 @@ export default function LaptopModel({ ...props }) {
   });
   const rotateIn = useSpring({
     to: async (next) => {
-      await next({ rotation: [0, 2 * Math.PI, 0], position: [1.5, 0, 0] })
-      await next({ rotation: [0, 2 * Math.PI, 0], position: [0, 0, 0] });
+      await next({ rotation: [0, 2 * Math.PI, 0], position: [1.5, 0, 0] });
+      await next({
+        rotation: [0, 2 * Math.PI, 0],
+        position: [0, 0, 0],
+      });
     },
     from: {
       rotation: [0, Math.PI, 0],
@@ -38,7 +44,7 @@ export default function LaptopModel({ ...props }) {
     },
   });
 
-  return (
+  return aspectRatio < 1.2 ? null : (
     <a.group
       ref={group}
       {...props}
