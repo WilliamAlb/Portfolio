@@ -45,7 +45,7 @@ export default function SplashText() {
       <animated.h2 style={fadeIn}>Hi</animated.h2>
       <animated.h2 style={fadeInSecond}>I'm William</animated.h2>
       <br/>
-      <animated.h2 style={fadeInThird}>Here's my stack</animated.h2>
+      <animated.h3 style={fadeInThird}>Here's my stack</animated.h3>
     </Html>
   );
 }

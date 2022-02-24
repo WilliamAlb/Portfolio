@@ -22,11 +22,13 @@ export default function LaptopModel({ ...props }) {
       await next({ rotation: [-2, 0, Math.PI] });
     },
     delay: 1000,
+
     from: {
       rotation: [0, 0, Math.PI],
     },
     config: config.slow,
   });
+
   const rotateIn = useSpring({
     to: async (next) => {
       await next({ rotation: [0, 2 * Math.PI, 0], position: [1.5, 0, 0] });
@@ -42,6 +44,7 @@ export default function LaptopModel({ ...props }) {
     config: {
       tension: 60,
     },
+    onRest: () => console.log("broken"),
   });
 
   return aspectRatio < 1.2 ? null : (

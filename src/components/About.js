@@ -27,14 +27,6 @@ const responsive = {
 function About() {
   return (
     <section id="About" className="page">
-      {/* <div className='about-content-container'>
-                <div className='profile-pic'></div>
-                <div className='about-text-container'>
-                    <h2>William Allaberdyev</h2>
-                    <p>Hi! My name's William, I'm a passionate 25 years old fullstack developer living in Haifa with my girlfriend, my dog and my cat.</p>
-                    <h3>Here's my Stack:</h3>
-                </div>
-            </div> */}
       <ThreeCanvas />
       <div id="carousel-container">
         <Carousel
